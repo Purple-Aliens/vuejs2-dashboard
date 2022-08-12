@@ -45,6 +45,10 @@
     "env": {
       "node": true
     },
+    "extends": [
+      "plugin:vue/vue3-strongly-recommended",
+      "@vue/standard"
+    ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
