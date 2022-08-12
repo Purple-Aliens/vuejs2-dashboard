@@ -1,12 +1,12 @@
 <template>
-  homeView
+  NavBar
 </template>
 
 <script>
 
 export default {
-  name: 'HomeView',
+  name: 'NavBar',
 }
 </script>
 
-<style scoped></style>
+<style></style>
