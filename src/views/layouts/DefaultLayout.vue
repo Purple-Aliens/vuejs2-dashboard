@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavBar />
-    <router-view />
+    <div class="container flex flex-col px-6 py-10 mx-auto">
+      <router-view />
+    </div>
   </div>
 </template>
 

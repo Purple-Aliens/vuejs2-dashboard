@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DefaultLayout from '@/views/layouts/DefaultLayout.vue'
-import HomeView from '@/views/HomeView.vue'
+import DashboardView from '@/views/DashboardView.vue'
 
 Vue.use(VueRouter)
 
@@ -13,8 +13,8 @@ const routes = [
     children: [
       {
         path: '/',
-        name: 'HomeView',
-        component: HomeView
+        name: 'DashboardView',
+        component: DashboardView
       }
     ]
   }
