@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <div
-      class="space-y-3 chart"
-      id="main"
-    />
-  </div>
+  <div
+    class="space-y-3 chart"
+    id="main"
+  />
 </template>
 
 <script>
