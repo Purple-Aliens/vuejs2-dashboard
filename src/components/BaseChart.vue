@@ -1,7 +1,8 @@
 <template>
   <div
-    class="space-y-3 chart"
-    id="main"
+    :id="id"
+    :class="rootClass"
+    class="chart"
   />
 </template>
 
@@ -17,32 +18,33 @@ export default {
     }
   },
 
-  methods: {
-    initChart(id) {
-      this.myChart = echarts.init(document.getElementById(id))
+  props: {
+    id: {
+      type: [String, Number],
+      required: true,
+      default: null
+    },
+    option: {
+      type: Object,
+      required: true,
+      default: () => {}
+    },
+    rootClass: {
+      type: String,
+      required: false,
+      default: ''
+    },
+  },
 
-      this.myChart.setOption({
-        title: {
-          text: 'ECharts Getting Started Example'
-        },
-        tooltip: {},
-        xAxis: {
-          data: ['shirt', 'cardigan', 'chiffon', 'pants', 'heels', 'socks']
-        },
-        yAxis: {},
-        series: [
-          {
-            name: 'sales',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-          }
-        ]
-      });
+  methods: {
+    initChart(id, option) {
+      this.myChart = echarts.init(document.getElementById(id))
+      this.myChart.setOption(option)
     }
   },
 
   mounted() {
-    this.initChart('main')
+    this.initChart(this.id, this.option)
   }
 }
 </script>
