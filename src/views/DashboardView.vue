@@ -23,16 +23,13 @@
 <script>
 import BaseChart from '@/components/BaseChart.vue'
 import chartData from '@/data/chartData'
-
 export default {
   name: 'DashboardView',
-
   data: () => {
     return {
       chartData: chartData
     }
   },
-
   components: {
     BaseChart,
   }
